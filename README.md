@@ -4,7 +4,7 @@
 1. pull docker image from docker registry
 ```
 docker pull firstspk1/testcgo:2
-docker run -it -p 9999:9999 firstspk1/testcgo:latest
+docker run -it -p 9999:9999 firstspk1/testcgo:2
 ```
 
 2. git clone this repository

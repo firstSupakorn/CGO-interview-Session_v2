@@ -3,7 +3,7 @@
 # How to run docker container
 1. pull docker image from docker registry
 ```
-docker pull firstspk1/testcgo:latest
+docker pull firstspk1/testcgo:2
 docker run -it -p 9999:9999 firstspk1/testcgo:latest
 ```
 
@@ -28,8 +28,7 @@ Quit the server with CONTROL-C.
 ```
 
 
-Then create an HTTP GET method on port 9999 with parameter x and a 
-as follows
+Then create an HTTP GET method on port 9999, Enter x and a value and press submit.
 ```
 x = 5
 a = [1,2,3,4,5,7]
@@ -44,3 +43,8 @@ a = [1,3,1,4,2,3,5,4]
 http://localhost:9999/testcgo/?x=5&a=1,3,1,4,2,3,5,4
 The earliest time when the frog can jump to the other side of the river is 6 
 ```
+Input screen
+![alt text](https://github.com/firstSupakorn/CGO-interview-Session_v2/blob/main/InputScreen.jpg)
+Output screen
+![alt text](https://github.com/firstSupakorn/CGO-interview-Session_v2/blob/main/output.ScreenJPG.JPG)
+

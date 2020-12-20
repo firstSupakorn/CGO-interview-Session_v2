@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>A small frog wants to get to the other side of a river</h1>
+
+<form method="get", action="/testcgo/">
+    {% csrf_token %}
+    <p>The earliest time when the frog can jump to the other side of the river is {{output}} second
+    </p>
+  <input type="submit" value="go back">
+</form>
+</body>
+</html>

@@ -1,22 +1,23 @@
 from django.http import HttpResponse
 from rest_framework import generics
+from .forms import CreateNewList
+from django.shortcuts import render
 
 
-def get_queryset(request,x=0):
-  try:
-    x = int(request.GET.get('x'))
-  except(ValueError, TypeError, AttributeError):
-    return HttpResponse("Please enter the parameter-a in the form http://localhost:9999/testcgo/?x=1&a=1,2,3,4,5,7")
+def input(request,x=0):
+    form = CreateNewList()
+    return render(request,"inputPage.html",{"form":form})
 
-  try:
-    a = request.GET.get('a')
-    listA = a.split(",")
-    listA = list(map(int, listA))
-  except(ValueError, TypeError, AttributeError ):
-    return HttpResponse("Please enter the parameter-a in the form http://localhost:9999/testcgo/?x=1&a=1,2,3,4,5,7")
-
-  output = solution(x,listA)
-  return HttpResponse("The earliest time when the frog can jump to the other side of the river is " + str(output) + " second")
+def output(request):
+    if request.method == "GET":
+        form = CreateNewList(request.GET)
+        if form.is_valid():
+            x = form.cleaned_data["x"]
+            a = form.cleaned_data["a"]
+            listA = a.split(",")
+            listA = list(map(int, listA))
+            output = solution(int(x),listA)
+    return render(request,"outputPage.html",{"output":output})
 
 def solution(X, A):
   '''

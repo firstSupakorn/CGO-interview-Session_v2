@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>A small frog wants to get to the other side of a river</h1>
+
+<form method="get" action="/output/">
+    <h2>example</h2>
+    <ul>
+        <li>x   :   5</li>
+        <li>a   :   1,2,3,3,4,5,8</li>
+    </ul>
+    <h2>Input</h2>
+
+    {% csrf_token %}
+    {{form.as_p}}
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
+</body>
+</html>

@@ -43,8 +43,6 @@ a = [1,3,1,4,2,3,5,4]
 http://localhost:9999/testcgo/?x=5&a=1,3,1,4,2,3,5,4
 The earliest time when the frog can jump to the other side of the river is 6 
 ```
-Input screen
 ![alt text](https://github.com/firstSupakorn/CGO-interview-Session_v2/blob/master/InputScreen.jpg)
-Output screen
 ![alt text](https://github.com/firstSupakorn/CGO-interview-Session_v2/blob/master/output.ScreenJPG.JPG)
 
